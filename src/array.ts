@@ -28,9 +28,7 @@ biodata = ['Sumedang', 18];
 
 /**
  * ! Error kerana value kedua harus berisi number
- */
-biodata = ['Sawala', 'Sumedang'];
-/**
  * ! Error karena length tidak boleh lebih dari 2 data
  */
-biodata = ['andri', 18, true];
+// biodata = ['Sawala', 'Sumedang'];
+// biodata = ['andri', 18, true];
