@@ -30,3 +30,16 @@ function printMe(): void {
   console.log('TS sangat menarik');
 }
 printMe();
+
+/**
+ * * Type data Arguments (parameter)
+ * ? Type data dideklariskan diawal pembuatan parameter
+ * @param val1 hanya bisi diisi number
+ * @param val2 hanya bisa diisi number
+ */
+function multiply(val1: number, val2: number): number {
+  return val1 * val2;
+}
+
+const result = multiply(5, 10);
+console.log(result);
