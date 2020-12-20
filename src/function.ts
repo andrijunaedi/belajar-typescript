@@ -43,3 +43,18 @@ function multiply(val1: number, val2: number): number {
 
 const result = multiply(5, 10);
 console.log(result);
+
+/**
+ * * Function as Type
+ * ? Melakukan standarisasi (rule) type data pada function
+ */
+type Tambah = (val1: number, val2: number) => number;
+
+/**
+ * * Function Add use type Tambah
+ * ? Function yang harus menyertakan semua value sesuai dengan type Tambah
+ * ! Error jika type selain number dan tidak ada return number
+ * @param val1 hanya bisa diisi number
+ * @param val2 hanya bisa diisi number
+ */
+const Add: Tambah = (val1: number, val2: number): number => val1 + val2;
