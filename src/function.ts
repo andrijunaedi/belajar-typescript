@@ -70,3 +70,13 @@ const fullName = (first: string, last: string = 'Junaedi'): string => {
 };
 console.log(fullName('Andri'));
 console.log(fullName('Diky', 'Rahman'));
+
+/**
+ * * Opsional Parameter
+ * ? Menggunakan tanda ( ? ) untuk menambahkan opsional parameter
+ * @param val1 string wajib diisi
+ * @param val2 string opsional jika tidak diisi akan undefined
+ */
+const getBlood = (val1: string, val2?: string): string => `${val1} ${val2}`;
+console.log(getBlood('O'));
+console.log(getBlood('A', 'B'));
