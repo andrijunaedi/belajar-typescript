@@ -58,3 +58,15 @@ type Tambah = (val1: number, val2: number) => number;
  * @param val2 hanya bisa diisi number
  */
 const Add: Tambah = (val1: number, val2: number): number => val1 + val2;
+
+/**
+ * * Default Parameter
+ * ? Menetapkan nilai awal untuk parameter last
+ * @param first string wajib diisi
+ * @param last string ini bersifat opsional
+ */
+const fullName = (first: string, last: string = 'Junaedi'): string => {
+  return `${first} ${last}`;
+};
+console.log(fullName('Andri'));
+console.log(fullName('Diky', 'Rahman'));
