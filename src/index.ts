@@ -30,3 +30,13 @@ heroes = 18;
 heroes = [];
 heroes = {};
 heroes = true || false || 'string';
+
+/**
+ * * Type Data Union
+ * ? Penambahan type data menggunakan tanda ( | )
+ * ? Type bisa diisi lebih dari 1 type data
+ * TODO: Variabel phone bisa diisi number dan string
+ */
+let phone: number | string;
+phone = 6281821616;
+phone = '0811715351';
