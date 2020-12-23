@@ -41,6 +41,7 @@ class Admin extends User {
   read: boolean = true;
   write: boolean = true;
   phone: string;
+  private _email: string = '';
 
   /**
    * * Super Constructor
@@ -61,6 +62,26 @@ class Admin extends User {
       write: this.write,
     };
   }
+
+  /**
+   * * Setter
+   * ? Berfungsi untuk mengatur (set) dan validasi data email
+   */
+  set email(value: string) {
+    if (value.length < 5) {
+      this._email = 'Email Salah';
+    } else {
+      this._email = value;
+    }
+  }
+
+  /**
+   * * Getter
+   * ? Berfungsi untuk mendapatkan (get) data email
+   */
+  get email(): string {
+    return this._email;
+  }
 }
 
 let admin = new Admin('081236253', 'Diky', 18);
@@ -68,3 +89,10 @@ admin.getName();
 admin.getRole();
 admin.setName('Rahman');
 admin.phone;
+
+/**
+ * * Set (mangatur) email admin
+ * * Get (mengakses) email admin
+ */
+admin.email = 'admin@andri.com';
+console.log(admin.email);
