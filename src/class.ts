@@ -44,6 +44,12 @@ class Admin extends User {
   private _email: string = '';
 
   /**
+   * * Static Property
+   * ? Property yang bisa langsung diakses tanpa perlu inisialisasi
+   */
+  static getNameRole: string = 'Admin';
+
+  /**
    * * Super Constructor
    * ? Berguna untuk menambahkan parameter baru pada class child ( Admin )
    * ? Memanggil constructor dari parent class ( User )
@@ -82,6 +88,14 @@ class Admin extends User {
   get email(): string {
     return this._email;
   }
+
+  /**
+   * * Static Method
+   * ? Method yang bisa langsung diakses tanpa perlu inisialisasi
+   */
+  static hello(): string {
+    return 'Hello admin tamvan';
+  }
 }
 
 let admin = new Admin('081236253', 'Diky', 18);
@@ -96,3 +110,9 @@ admin.phone;
  */
 admin.email = 'admin@andri.com';
 console.log(admin.email);
+
+/**
+ * * Property bisa langsung diakses tanpa insialisasi (new)
+ */
+console.log(Admin.getNameRole);
+console.log(Admin.hello());
