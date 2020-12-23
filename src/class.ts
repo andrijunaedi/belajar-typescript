@@ -40,6 +40,20 @@ console.log(member);
 class Admin extends User {
   read: boolean = true;
   write: boolean = true;
+  phone: string;
+
+  /**
+   * * Super Constructor
+   * ? Berguna untuk menambahkan parameter baru pada class child ( Admin )
+   * ? Memanggil constructor dari parent class ( User )
+   * @param phone ini parameter yang ditambahkan di class Admin
+   * @param name parameter dari class User
+   * @param age parameter dari class User
+   */
+  constructor(phone: string, name: string, age: number) {
+    super(name, age);
+    this.phone = phone;
+  }
 
   getRole(): { read: boolean; write: boolean } {
     return {
@@ -49,7 +63,8 @@ class Admin extends User {
   }
 }
 
-let admin = new Admin('Diky', 18);
+let admin = new Admin('081236253', 'Diky', 18);
 admin.getName();
 admin.getRole();
 admin.setName('Rahman');
+admin.phone;
