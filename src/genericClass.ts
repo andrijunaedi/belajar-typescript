@@ -14,7 +14,7 @@ class List<T> {
     this.data.push(value);
   }
 
-  addMutiple(...elements: T[]) {
+  addMultiple(...elements: T[]) {
     this.data.push(...elements);
   }
 
@@ -28,7 +28,7 @@ class List<T> {
  */
 let numbers = new List<number>(1, 2, 3);
 numbers.add(4);
-numbers.addMutiple(5, 6, 7);
+numbers.addMultiple(5, 6, 7);
 console.log(numbers.getAll());
 
 /**
@@ -36,5 +36,5 @@ console.log(numbers.getAll());
  */
 let random = new List<number | string>(1, 'a', 'b', 2);
 random.add('c');
-random.addMutiple(3, 'd');
+random.addMultiple(3, 'd');
 console.log(random.getAll());

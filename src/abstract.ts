@@ -3,7 +3,7 @@
  * ? Class yang tidak bisa diintansiasi langsung dari luar class itu sendiri
  * ? Melainkan harus extends sebuah child class nya
  */
-abstract class Vihecle {
+abstract class Vehicle {
   /**
    * ? Nilai wheels didapat dari child class yang melakukan extends
    */
@@ -18,7 +18,7 @@ abstract class Vihecle {
  * * class Car adalah Vihecle (kendaraan)
  * ? Car harus memasukkan nilai wheels karena extends ke Vihecle
  */
-class Car extends Vihecle {
+class Car extends Vehicle {
   wheels: number = 4;
 }
 
@@ -26,7 +26,7 @@ class Car extends Vihecle {
  * * class Motorcycle adalah Vihecle (kendaraan)
  * ? Motorcycle harus memasukkan nilai wheels karena extends ke Vihecle
  */
-class Motorcycle extends Vihecle {
+class Motorcycle extends Vehicle {
   wheels: number = 2;
 }
 

@@ -93,17 +93,17 @@ const checkout = (kodeBarang: string[], diskon: number) => {
    * * Sub total dan diskon
    */
   const subTotal: number = totalLaptop + totalIphone + totalXiaomi + totalPs5;
-  const discout: number = Math.round((subTotal * diskon) / 100);
+  const discount: number = Math.round((subTotal * diskon) / 100);
 
   console.log('\n============================');
   console.log(`Subtotal : ${subTotal}`);
-  console.log(`Diskon   : ${discout} (${diskon}%)`);
+  console.log(`Diskon   : ${discount} (${diskon}%)`);
 
   /**
    * * Total
    */
   console.log(`\n============================`);
-  console.log(`Total : ${subTotal - discout}`);
+  console.log(`Total : ${subTotal - discount}`);
 };
 
 checkout(['KD0023', 'KD0023', 'H12020', 'D90312', 'C42212'], 25);
